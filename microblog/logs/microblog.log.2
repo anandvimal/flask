@@ -1,4 +1,28 @@
-2019-10-07 15:03:30,838 ERROR: Exception on /user/susan [GET] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-10-04 14:14:06,965 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-04 14:14:27,965 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-05 13:13:55,257 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-05 19:58:51,651 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 09:33:49,690 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 09:34:54,440 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 09:37:05,479 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 09:39:38,713 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 09:45:48,303 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 09:47:16,060 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 10:07:11,225 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 14:07:23,080 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 14:09:29,743 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 14:11:55,762 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 14:12:48,324 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 14:15:59,956 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 14:22:04,748 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 15:50:32,217 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-06 15:53:25,949 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-07 10:26:13,647 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-07 13:39:24,590 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-07 14:10:53,560 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-07 14:16:25,141 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-07 14:54:40,732 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-07 14:55:05,156 ERROR: Exception on /user/susan [GET] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +38,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\routes.py", line 72, in user
-    return render_template('user.html', user=user, posts=posts, next_url=next_url, prev_url=prev_url)
+  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\routes.py", line 75, in user
+    return render_template('user.html', user=user, posts=posts)
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
@@ -35,7 +59,8 @@ Traceback (most recent call last):
   File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\templates\user.html", line 33, in block "content"
     {% for post in posts %}
 TypeError: 'Pagination' object is not iterable
-2019-10-07 15:05:40,419 ERROR: Exception on /user/susan [GET] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-10-07 14:59:50,526 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
+2019-10-07 14:59:55,967 ERROR: Exception on /user/susan [GET] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -52,7 +77,7 @@ Traceback (most recent call last):
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
   File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\routes.py", line 72, in user
-    return render_template('user.html', user=user, posts=posts, next_url=next_url, prev_url=prev_url)
+    return render_template('user.html', user=user, posts=posts)
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
@@ -72,39 +97,4 @@ Traceback (most recent call last):
   File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\templates\user.html", line 33, in block "content"
     {% for post in posts %}
 TypeError: 'Pagination' object is not iterable
-2019-10-07 15:06:58,724 ERROR: Exception on /user/shyam [GET] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\routes.py", line 72, in user
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\templates\user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\templates\base.html", line 36, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\templates\user.html", line 33, in block "content"
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
+2019-10-07 15:03:24,111 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:55]
