@@ -25,8 +25,8 @@ class UserModelCase(unittest.TestCase):
                                          '?d=identicon&s=128'))
 
     def test_follow(self):
-        u1 = user(username='john', email='john@example.com')
-        u2 = user(username='susan', email='susan@example.com')
+        u1 = User(username='john', email='john@example.com')
+        u2 = User(username='susan', email='susan@example.com')
         db.session.add(u1)
         db.session.add(u2)
         db.session.commit()
@@ -53,6 +53,7 @@ class UserModelCase(unittest.TestCase):
         u2 = User(username='susan', email='susan@example.com')
         u3 = User(username='mary', email='mary@example.com')
         u4 = User(username='david', email='david@example.com')
+        db.session.add_all([u1, u2, u3, u4])
 
         #create four posts
         now = datetime.utcnow()
@@ -75,10 +76,13 @@ class UserModelCase(unittest.TestCase):
         f2 = u2.followed_posts().all()
         f3 = u3.followed_posts().all()
         f4 = u4.followed_posts().all()
-        self.assertEqual(f1, [p2, p4, p1])
+
+        self.assertEqual( f1 , [p2, p4, p1])
         self.assertEqual(f2, [p2, p3])
         self.assertEqual(f3, [p3, p4])
         self.assertEqual(f4, [p4])
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+
+#
