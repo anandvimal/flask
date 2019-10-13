@@ -35,3 +35,49 @@ Traceback (most recent call last):
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\socket.py", line 716, in create_connection
     sock.connect(sa)
 TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2019-10-12 21:25:37,931 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
+2019-10-12 21:27:33,180 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
+2019-10-12 21:27:48,415 ERROR: Exception on /reset_password_request [POST] [in E:\Anaconda\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\Anaconda\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\routes.py", line 144, in reset_password_request
+    send_password_reset_email(user)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\email.py", line 14, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\models.py", line 68, in get_reset_password_token
+    return jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+2019-10-12 21:48:43,276 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
+2019-10-12 21:49:18,640 ERROR: Exception on /reset_password_request [POST] [in E:\Anaconda\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\Anaconda\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\routes.py", line 144, in reset_password_request
+    send_password_reset_email(user)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\email.py", line 14, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\models.py", line 68, in get_reset_password_token
+    return jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+2019-10-12 21:50:18,101 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
