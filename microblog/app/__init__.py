@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from flask_login import LoginManager
 from flask_mail import Mail
 from config import Config
+from flask_bootstrap import Bootstrap
 
 import logging
 from logging.handlers import SMTPHandler
@@ -17,6 +18,7 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 mail = Mail(app)
+bootstrap = Bootstrap(app)
 
 #app.config['SECRET KEY'] = 'you-will-never-guess'
 #we can add more variables here as needed
