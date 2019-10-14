@@ -5,6 +5,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from hashlib import md5
 from time import time
 import jwt
+#pip install jwt
+#pip install pyjwt
 
 
 @login.user_loader

@@ -1,51 +1,4 @@
-2019-10-10 18:03:30,336 ERROR: Exception on /reset_password_request [POST] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\routes.py", line 144, in reset_password_request
-    send_password_reset_email(user)
-  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\email.py", line 19, in send_password_reset_email
-    html_body=render_template('email/reset_password.html', user=user, token=token)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\loaders.py", line 125, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 591, in compile
-    self.handle_exception(exc_info, source_hint=source_hint)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\templates\email\reset_password.html", line 4, in template
-    <a href="{{ url_for('reset_password'), token=token, _external=True }}">
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\parser.py", line 876, in subparse
-    self.stream.expect('variable_end')
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\jinja2\lexer.py", line 384, in expect
-    self.name, self.filename)
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2019-10-10 18:07:11,960 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
-2019-10-10 18:07:19,458 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
-2019-10-10 18:07:56,521 ERROR: Exception on /reset_password_request [POST] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-10-10 18:16:06,807 ERROR: Exception on /reset_password_request [POST] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -82,4 +35,96 @@ Traceback (most recent call last):
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\socket.py", line 716, in create_connection
     sock.connect(sa)
 TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
-2019-10-10 18:15:22,373 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
+2019-10-12 21:25:37,931 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
+2019-10-12 21:27:33,180 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
+2019-10-12 21:27:48,415 ERROR: Exception on /reset_password_request [POST] [in E:\Anaconda\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\Anaconda\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\routes.py", line 144, in reset_password_request
+    send_password_reset_email(user)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\email.py", line 14, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\models.py", line 68, in get_reset_password_token
+    return jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+2019-10-12 21:48:43,276 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
+2019-10-12 21:49:18,640 ERROR: Exception on /reset_password_request [POST] [in E:\Anaconda\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\Anaconda\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\routes.py", line 144, in reset_password_request
+    send_password_reset_email(user)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\email.py", line 14, in send_password_reset_email
+    token = user.get_reset_password_token()
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\models.py", line 68, in get_reset_password_token
+    return jwt.encode(
+AttributeError: module 'jwt' has no attribute 'encode'
+2019-10-12 21:50:18,101 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:57]
+2019-10-12 22:35:35,598 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-12 22:36:39,713 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-12 23:46:21,405 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-12 23:53:19,214 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-12 23:53:26,927 ERROR: Exception on / [GET] [in E:\Anaconda\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\Anaconda\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Anaconda\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\Anaconda\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\routes.py", line 26, in index
+    return render_template("index.html", title='Home Page', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "E:\Anaconda\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "E:\Anaconda\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "E:\Anaconda\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "E:\Anaconda\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "E:\Anaconda\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\Anaconda\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\templates\base.html", line 37, in top-level template code
+    {% block content %}{% endblock %}
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\templates\index.html", line 21, in block "content"
+    {% include '_post.html' %}
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\templates\_post.html", line 3, in top-level template code
+    <td> <img src="{{ post.author.avatar(36) }}"></td>
+  File "E:\git kraken\flaskMegaTutorial2\microblog\app\models.py", line 41, in avatar
+    digest = md5(self.email.lower().encode1('utf-8')).hexdigest()
+AttributeError: 'str' object has no attribute 'encode1'
+2019-10-13 14:02:12,376 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 14:03:01,554 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]

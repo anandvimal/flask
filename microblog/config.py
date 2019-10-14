@@ -22,6 +22,6 @@ class Config(object):
     MAIL_USE_TLS = 1
     MAIL_USERNAME = 'colirsweb@gmail.com'
 
-    POSTS_PER_PAGE = 3
+    POSTS_PER_PAGE = 5
 
 #

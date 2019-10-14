@@ -1,4 +1,4 @@
-2019-10-10 18:16:06,807 ERROR: Exception on /reset_password_request [POST] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
+2019-10-13 14:04:17,612 ERROR: Exception on /reset_password_request [POST] [in C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -18,20 +18,17 @@ Traceback (most recent call last):
     html_body=render_template('email/reset_password.html', user=user, token=token)
   File "C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\email.py", line 9, in send_email
     mail.send(msg)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_mail.py", line 491, in send
-    with self.connect() as connection:
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_mail.py", line 144, in __enter__
-    self.host = self.configure_host()
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_mail.py", line 158, in configure_host
-    host = smtplib.SMTP(self.mail.server, self.mail.port)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\smtplib.py", line 251, in __init__
-    (code, msg) = self.connect(host, port)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\smtplib.py", line 336, in connect
-    self.sock = self._get_socket(host, port, self.timeout)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\smtplib.py", line 307, in _get_socket
-    self.source_address)
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\socket.py", line 727, in create_connection
-    raise err
-  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\socket.py", line 716, in create_connection
-    sock.connect(sa)
-TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\site-packages\flask_mail.py", line 192, in send
+    message.rcpt_options)
+  File "C:\Users\dsandhu\AppData\Local\Continuum\anaconda3\lib\smtplib.py", line 867, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (530, b'5.5.1 Authentication Required. Learn more at\n5.5.1  https://support.google.com/mail/?p=WantAuthError l72sm21130141pjb.7 - gsmtp', 'colirsweb@gmail.com')
+2019-10-13 14:05:13,213 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 17:17:49,051 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 17:18:51,948 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 17:19:15,536 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 17:22:38,568 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
