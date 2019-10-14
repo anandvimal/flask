@@ -28,3 +28,7 @@ Traceback (most recent call last):
     raise SMTPSenderRefused(code, resp, from_addr)
 smtplib.SMTPSenderRefused: (530, b'5.5.1 Authentication Required. Learn more at\n5.5.1  https://support.google.com/mail/?p=WantAuthError l72sm21130141pjb.7 - gsmtp', 'colirsweb@gmail.com')
 2019-10-13 14:05:13,213 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 17:17:49,051 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 17:18:51,948 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 17:19:15,536 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 17:22:38,568 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
