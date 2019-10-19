@@ -32,3 +32,5 @@ smtplib.SMTPSenderRefused: (530, b'5.5.1 Authentication Required. Learn more at\
 2019-10-13 17:18:51,948 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
 2019-10-13 17:19:15,536 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
 2019-10-13 17:22:38,568 INFO: Microblog startup [in C:\Users\dsandhu\Documents\gitkraken\flaskMegaTutorial2\microblog\app\__init__.py:59]
+2019-10-13 20:15:06,733 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:61]
+2019-10-19 10:27:24,455 INFO: Microblog startup [in E:\git kraken\flaskMegaTutorial2\microblog\app\__init__.py:61]
