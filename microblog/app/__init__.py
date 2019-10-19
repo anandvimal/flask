@@ -6,6 +6,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from config import Config
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 
 import logging
 from logging.handlers import SMTPHandler
@@ -19,6 +20,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 mail = Mail(app)
 bootstrap = Bootstrap(app)
+moment = Moment(app)
 
 #app.config['SECRET KEY'] = 'you-will-never-guess'
 #we can add more variables here as needed
