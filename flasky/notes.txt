@@ -1,0 +1,7 @@
+to start on windows git bash do:
+source venv/Scripts/activate
+
+to get all requirement:
+ pip freeze > requirements.txt
+
+ 
