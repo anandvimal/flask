@@ -9,6 +9,11 @@ def index():
 def user(name):
     return render_template('user.html', name=name)
 
+
+@app.route('/testcommontemplate')
+def testcommontemplate():
+    return render_template('testcommon.html')
+
 all_comments = ['one','two','three', 'four', 'five']
 @app.route('/listcomments')
 def allcomments():
