@@ -9,6 +9,12 @@ def index():
 def user(name):
     return render_template('user.html', name=name)
 
+all_comments = ['one','two','three', 'four', 'five']
+@app.route('/listcomments')
+def allcomments():
+    return render_template('comments.html', comments=all_comments)
+        
+
 @app.route('/blue')
 def blue():
     user_agent = request.headers.get('User-Agent')
