@@ -1,12 +1,20 @@
 from flask import Flask, request, make_response, redirect, abort, render_template
 from flask_bootstrap import Bootstrap
 
+#import app
 app = Flask(__name__)
+
+#import bootstrap
 bootstrap = Bootstrap(app)
+
+#import flask momentjs
+from flask_moment import Moment 
+moment = Moment(app)
+from datetime import datetime
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', current_time=datetime.utcnow())
 
 @app.route('/user/<name>')
 def user(name):
