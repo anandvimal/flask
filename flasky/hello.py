@@ -1,8 +1,15 @@
-from flask import Flask, request, make_response, redirect, abort, render_template
+from flask import Flask, request, make_response, abort, render_template, session, redirect, url_for
 from flask_bootstrap import Bootstrap
 
 #import app
 app = Flask(__name__)
+
+#for flask wtf form
+app.config['SECRET_KEY'] = 'hard to guess string' #its non prod env
+
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
 
 #import bootstrap
 bootstrap = Bootstrap(app)
@@ -12,9 +19,20 @@ from flask_moment import Moment
 moment = Moment(app)
 from datetime import datetime
 
-@app.route('/')
+class NameForm(FlaskForm):
+    name = StringField('What is your name?', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html', current_time=datetime.utcnow())
+    name = None
+    form = NameForm()
+    if form.validate_on_submit():
+        session['name'] = form.name.data
+        #form.name.data = ''
+        return redirect(url_for('index'))
+    return render_template('index.html', current_time=datetime.utcnow(), form=form, name=session.get('name'))
 
 @app.route('/user/<name>')
 def user(name):
@@ -37,7 +55,6 @@ def blue():
     response = make_response('<h1>This document carries a cookie!</h1>')
     response.set_cookie('answer', '42')
     return response
-    #return '<h1>Hello World! your User-Agent is {}</h1>'.format(user_agent)
 
 @app.route('/red')
 def red():
