@@ -1,8 +1,19 @@
 from flask import Flask, request, make_response, abort, render_template, session, redirect, url_for, flash
 from flask_bootstrap import Bootstrap
 
+#flask sql alchemy requirements
+import os
+from flask_sqlalchemy import SQLAlchemy
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 #import app
 app = Flask(__name__)
+
+#sql alchemy config
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///' + os.path.join(basedir, 'data.sqlite')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 #for flask wtf form
 app.config['SECRET_KEY'] = 'hard to guess string' #its non prod env
@@ -11,18 +22,34 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
-#import bootstrap
+#bootstrap requirements
 bootstrap = Bootstrap(app)
 
-#import flask momentjs
+#flask momentjs requirements
 from flask_moment import Moment 
 moment = Moment(app)
 from datetime import datetime
 
+class Role(db.Model):
+    __tablename__ = 'roles'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
+
+    def __repr__(self):
+        return '<Role %r>' % self.name
+    
+class User(db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), unique=True, index=True)
+
+    def __repr__(self):
+        return '<Users %r>' % self.username
+
+
 class NameForm(FlaskForm):
     name = StringField('What is your name?', validators=[DataRequired()])
     submit = SubmitField('Submit')
-
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -43,7 +70,6 @@ def index():
 def user(name):
     return render_template('user.html', name=name)
 
-
 @app.route('/testcommontemplate')
 def testcommontemplate():
     return render_template('testcommon.html')
@@ -53,7 +79,6 @@ all_comments = ['one','two','three', 'four', 'five']
 def allcomments():
     return render_template('comments.html', comments=all_comments)
         
-
 @app.route('/blue')
 def blue():
     user_agent = request.headers.get('User-Agent')
@@ -77,7 +102,6 @@ def get_user(id):
     if not user:
         abort(404)
     return '<h1>Hello, {}</h1>'.format(user)
-
 
 @app.route('/bad')
 def bad_response():
