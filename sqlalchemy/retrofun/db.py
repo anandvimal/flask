@@ -1,6 +1,8 @@
 import os
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
 
 load_dotenv()
 
+engine = create_engine(os.environ['DATABASE_URL'], echo=True)
 print('Database URL:', os.environ['DATABASE_URL'])
