@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 import os
 from flask_sqlalchemy import SQLAlchemy
 
+#flask migrate framework
+from flask_migrate import Migrate
+
 #load env variables from .env file
 load_dotenv()
 
@@ -19,6 +22,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///' + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 #for flask wtf form
 app.config['SECRET_KEY'] = 'hard to guess string' #its non prod env
