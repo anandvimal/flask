@@ -1,9 +1,14 @@
 from flask import Flask, request, make_response, abort, render_template, session, redirect, url_for, flash
 from flask_bootstrap import Bootstrap
 
+from dotenv import load_dotenv
+
 #flask sql alchemy requirements
 import os
 from flask_sqlalchemy import SQLAlchemy
+
+#load env variables from .env file
+load_dotenv()
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -34,6 +39,7 @@ class Role(db.Model):
     __tablename__ = 'roles'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), unique=True)
+    users = db.relationship('User', backref='role', lazy='dynamic')
 
     def __repr__(self):
         return '<Role %r>' % self.name
@@ -42,6 +48,7 @@ class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), unique=True, index=True)
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 
     def __repr__(self):
         return '<Users %r>' % self.username
